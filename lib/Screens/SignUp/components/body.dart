@@ -24,7 +24,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               "SIGNUP",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
@@ -56,7 +56,7 @@ class Body extends StatelessWidget {
                 );
               },
             ),
-            OrDivider(),
+            const OrDivider(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

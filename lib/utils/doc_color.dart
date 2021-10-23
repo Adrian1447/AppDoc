@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class HexColor extends Color {
-  static const MethodChannel _channel = const MethodChannel('hexcolor');
+  static const MethodChannel _channel = MethodChannel('hexcolor');
 
   static Future<String> get platformVersion async {
     final String version = await _channel.invokeMethod('getPlatformVersion');

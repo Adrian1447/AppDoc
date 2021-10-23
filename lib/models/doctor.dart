@@ -1,5 +1,3 @@
-import 'package:meta/meta.dart';
-
 class Doctor {
   final String firstName;
   final String lastName;

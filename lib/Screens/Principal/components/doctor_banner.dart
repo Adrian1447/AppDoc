@@ -18,13 +18,13 @@ class DoctorBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
             color: HexColor('#404B63').withOpacity(0.1),
             blurRadius: 10,
           ),
@@ -34,7 +34,7 @@ class DoctorBanner extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _imageSection(),
-          SizedBox(
+          const SizedBox(
             width: 16,
           ),
           _detailsSection(),
@@ -77,7 +77,7 @@ class DoctorBanner extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 4,
             ),
             Icon(
@@ -87,18 +87,18 @@ class DoctorBanner extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(
           doctor.firstName + ' ' + doctor.lastName,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.black,
             fontSize: 18,
             fontWeight: FontWeight.w700,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(

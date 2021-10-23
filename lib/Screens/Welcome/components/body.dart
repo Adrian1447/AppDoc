@@ -6,6 +6,7 @@ import 'package:flutter_application_1/components/rounded_button.dart';
 import 'package:flutter_application_1/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+// ignore: use_key_in_widget_constructors
 class Body extends StatelessWidget {
   @override
 
@@ -16,7 +17,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               "BIENVENIDO A APPDOC",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
@@ -46,7 +47,7 @@ class Body extends StatelessWidget {
                 Navigator.push(
                   context, MaterialPageRoute(
                     builder: (context){
-                      return SignUpScreen();
+                      return const SignUpScreen();
                     },
                   ),
                 );

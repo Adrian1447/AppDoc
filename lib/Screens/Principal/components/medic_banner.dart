@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MedicBanner extends StatefulWidget {
+  const MedicBanner({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => MedicBannerState();
 }
@@ -15,11 +17,12 @@ class MedicBannerState extends State<MedicBanner> {
   Widget initScreen() {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(0xff053F5E),
+      backgroundColor: const Color(0xff053F5E),
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Color(0xff053F5E),
+        backgroundColor: const Color(0xff053F5E),
         centerTitle: true,
+        // ignore: prefer_const_constructors
         leading: Icon(
           Icons.menu,
           color: Colors.white,
@@ -27,7 +30,8 @@ class MedicBannerState extends State<MedicBanner> {
         actions: [
           GestureDetector(
             child: Container(
-              margin: EdgeInsets.only(right: 10),
+              margin: const EdgeInsets.only(right: 10),
+              // ignore: prefer_const_constructors
               child: Icon(
                 Icons.notifications_rounded,
                 color: Colors.white,
@@ -36,7 +40,7 @@ class MedicBannerState extends State<MedicBanner> {
           ),
           GestureDetector(
             child: Container(
-              margin: EdgeInsets.only(right: 5),
+              margin: const EdgeInsets.only(right: 5),
               child: Image.asset("assets/images/usuario.png", width: size.width * 0.06,),
             ),
           )
@@ -45,15 +49,15 @@ class MedicBannerState extends State<MedicBanner> {
       body: Container(
         decoration: BoxDecoration(
             color: Colors.grey[100],
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(30), topLeft: Radius.circular(30))),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(top: 20, left: 20),
-              child: Text(
+              margin: const EdgeInsets.only(top: 20, left: 20),
+              child: const Text(
                 "Hi, User",
                 style: TextStyle(
                   color: Color(0xff363636),
@@ -63,8 +67,8 @@ class MedicBannerState extends State<MedicBanner> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 5, left: 20),
-              child: Text(
+              margin: const EdgeInsets.only(top: 5, left: 20),
+              child: const Text(
                 "Bienvenido de nuevo",
                 style: TextStyle(
                   color: Color(0xff363636),
@@ -75,14 +79,15 @@ class MedicBannerState extends State<MedicBanner> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 25, left: 20, right: 20),
+              margin: const EdgeInsets.only(top: 25, left: 20, right: 20),
               width: size.width,
               height: 60,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(5),
+                // ignore: prefer_const_literals_to_create_immutables
                 boxShadow: [
-                  BoxShadow(
+                  const BoxShadow(
                     color: Color(0x14000000),
                     offset: Offset(0, 10),
                     blurRadius: 15,
@@ -95,8 +100,8 @@ class MedicBannerState extends State<MedicBanner> {
                   Expanded(
                     flex: 5,
                     child: Container(
-                      margin: EdgeInsets.only(left: 10, right: 10),
-                      child: TextField(
+                      margin: const EdgeInsets.only(left: 10, right: 10),
+                      child: const TextField(
                         maxLines: 1,
                         autofocus: false,
                         style: TextStyle(color: Color(0xff107163), fontSize: 20),
@@ -112,10 +117,10 @@ class MedicBannerState extends State<MedicBanner> {
                     flex: 1,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xff107163),
+                        color: const Color(0xff107163),
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Icon(
                           Icons.search,
                           color: Colors.white,
@@ -129,12 +134,13 @@ class MedicBannerState extends State<MedicBanner> {
             ),
             Container(
               width: size.width,
-              margin: EdgeInsets.only(top: 20, left: 20),
+              margin: const EdgeInsets.only(top: 20, left: 20),
               child: Stack(
                 fit: StackFit.loose,
                 children: [
+                  // ignore: avoid_unnecessary_containers
                   Container(
-                    child: Text(
+                    child: const Text(
                       'Categoria',
                       style: TextStyle(
                         color: Color(0xff363636),
@@ -149,7 +155,7 @@ class MedicBannerState extends State<MedicBanner> {
             ),
             Container(
               height: 120,
-              margin: EdgeInsets.only(top: 20, left: 20),
+              margin: const EdgeInsets.only(top: 20, left: 20),
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
@@ -162,12 +168,13 @@ class MedicBannerState extends State<MedicBanner> {
             ),
             Container(
               width: size.width,
-              margin: EdgeInsets.only(top: 20, left: 20),
+              margin: const EdgeInsets.only(top: 20, left: 20),
               child: Stack(
                 fit: StackFit.loose,
                 children: [
+                  // ignore: avoid_unnecessary_containers
                   Container(
-                    child: Text(
+                    child: const Text(
                       'Medicos Disponibles',
                       style: TextStyle(
                         color: Color(0xff363636),
@@ -178,8 +185,8 @@ class MedicBannerState extends State<MedicBanner> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(right: 20, top: 1),
-                    child: Align(
+                    margin: const EdgeInsets.only(right: 20, top: 1),
+                    child: const Align(
                       alignment: Alignment.centerRight,
                       child: Text(
                         'Ver todos',
@@ -196,7 +203,7 @@ class MedicBannerState extends State<MedicBanner> {
             ),
             Expanded(
               child: Container(
-                margin: EdgeInsets.only(left: 20, right: 20),
+                margin: const EdgeInsets.only(left: 20, right: 20),
                 child: ListView(
                   children: [
                     demoTopRatedDr(
@@ -234,24 +241,26 @@ class MedicBannerState extends State<MedicBanner> {
     Size size = MediaQuery.of(context).size;
     return Container(
       width: 100,
-      margin: EdgeInsets.only(right: 15),
+      margin: const EdgeInsets.only(right: 15),
       decoration: BoxDecoration(
-        color: Color(0xff107163),
+        color: const Color(0xff107163),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          // ignore: avoid_unnecessary_containers
           Container(
             child: 
             SvgPicture.asset(img, height: size.height * 0.1,),
           ),
           Container(
+            // ignore: prefer_const_constructors
             margin: EdgeInsets.only(top: 10),
             child: Text(
               name,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 13,
                 fontFamily: 'Roboto',
@@ -274,7 +283,7 @@ class MedicBannerState extends State<MedicBanner> {
       child: Container(
         height: 90,
         width: size.width,
-        margin: EdgeInsets.only(top: 10),
+        margin: const EdgeInsets.only(top: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(5),
@@ -284,22 +293,22 @@ class MedicBannerState extends State<MedicBanner> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 20),
+              margin: const EdgeInsets.only(left: 20),
               height: 90,
               width: 50,
               child: Image.asset(img),
             ),
             Container(
-              margin: EdgeInsets.only(left: 20, top: 10),
+              margin: const EdgeInsets.only(left: 20, top: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 10),
+                    margin: const EdgeInsets.only(top: 10),
                     child: Text(
                       name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Color(0xff363636),
                         fontSize: 17,
                         fontFamily: 'Roboto',
@@ -308,12 +317,12 @@ class MedicBannerState extends State<MedicBanner> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 10),
+                    margin: const EdgeInsets.only(top: 10),
                     child: Row(
                       children: [
                         Text(
                           name,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color(0xffababab),
                             fontFamily: 'Roboto',
                             fontWeight: FontWeight.w300,
@@ -323,8 +332,9 @@ class MedicBannerState extends State<MedicBanner> {
                           margin: EdgeInsets.only(top: 3, left: size.width * 0.25),
                           child: Row(
                             children: [
+                              // ignore: avoid_unnecessary_containers
                               Container(
-                                child: Text(
+                                child: const Text(
                                   "Rating: ",
                                   style: TextStyle(
                                     color: Colors.black,
@@ -333,10 +343,11 @@ class MedicBannerState extends State<MedicBanner> {
                                   ),
                                 ),
                               ),
+                              // ignore: avoid_unnecessary_containers
                               Container(
                                 child: Text(
                                   rating,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.black,
                                     fontSize: 12,
                                     fontFamily: 'Roboto',
