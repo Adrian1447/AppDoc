@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'doctor_detailpage.dart';
+
 class MedicBanner extends StatefulWidget {
   const MedicBanner({Key? key}) : super(key: key);
 
@@ -278,7 +280,7 @@ class MedicBannerState extends State<MedicBanner> {
     var size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: () {
-        //Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorDetailPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorDetailPage()));
       },
       child: Container(
         height: 90,
