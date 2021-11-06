@@ -161,7 +161,7 @@ class MedicBannerState extends State<MedicBanner> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  demoCategories("assets/icons/heart.svg", "Presión UwU"),
+                  demoCategories("assets/icons/heart.svg", "Presión"),
                   demoCategories("assets/icons/balanza.svg", "Peso"),
                   demoCategories("assets/icons/electrocardiograma.svg", "Electrocardio"),
                   demoCategories("assets/icons/Cholesterol.svg", "Colesterol"),
