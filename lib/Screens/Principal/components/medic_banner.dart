@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/Presion/components/presion_banner.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'doctor_detailpage.dart';
@@ -241,7 +242,11 @@ class MedicBannerState extends State<MedicBanner> {
 
   Widget demoCategories(String img, String name) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => PresionBanner()));
+      },
+    child: Container(
       width: 100,
       margin: const EdgeInsets.only(right: 15),
       decoration: BoxDecoration(
@@ -272,6 +277,7 @@ class MedicBannerState extends State<MedicBanner> {
           ),
         ],
       ),
+      )
     );
   }
 
