@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/Colesterol/components/colesterol_banner.dart';
+import 'package:flutter_application_1/Screens/Electrocardiograma/components/electrocardiograma_banner.dart';
+import 'package:flutter_application_1/Screens/Peso/components/peso_banner.dart';
 import 'package:flutter_application_1/Screens/Presion/components/presion_banner.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -163,9 +166,9 @@ class MedicBannerState extends State<MedicBanner> {
                 scrollDirection: Axis.horizontal,
                 children: [
                   demoCategories("assets/icons/heart.svg", "Presión"),
-                  demoCategories("assets/icons/balanza.svg", "Peso"),
-                  demoCategories("assets/icons/electrocardiograma.svg", "Electrocardio"),
-                  demoCategories("assets/icons/Cholesterol.svg", "Colesterol"),
+                  demoCategories1("assets/icons/balanza.svg", "Peso"),
+                  demoCategories3("assets/icons/electrocardiograma.svg", "Electrocardio"),
+                  demoCategories2("assets/icons/Cholesterol.svg", "Colesterol"),
                 ],
               ),
             ),
@@ -245,6 +248,129 @@ class MedicBannerState extends State<MedicBanner> {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => PresionBanner()));
+      },
+    child: Container(
+      width: 100,
+      margin: const EdgeInsets.only(right: 15),
+      decoration: BoxDecoration(
+        color: const Color(0xff107163),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          // ignore: avoid_unnecessary_containers
+          Container(
+            child: 
+            SvgPicture.asset(img, height: size.height * 0.1,),
+          ),
+          Container(
+            // ignore: prefer_const_constructors
+            margin: EdgeInsets.only(top: 10),
+            child: Text(
+              name,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 13,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+        ],
+      ),
+      )
+    );
+  }
+
+  Widget demoCategories1(String img, String name) {
+    Size size = MediaQuery.of(context).size;
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => PesoBanner()));
+      },
+    child: Container(
+      width: 100,
+      margin: const EdgeInsets.only(right: 15),
+      decoration: BoxDecoration(
+        color: const Color(0xff107163),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          // ignore: avoid_unnecessary_containers
+          Container(
+            child: 
+            SvgPicture.asset(img, height: size.height * 0.1,),
+          ),
+          Container(
+            // ignore: prefer_const_constructors
+            margin: EdgeInsets.only(top: 10),
+            child: Text(
+              name,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 13,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+        ],
+      ),
+      )
+    );
+  }
+
+  Widget demoCategories2(String img, String name) {
+    Size size = MediaQuery.of(context).size;
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ColesterolBanner()));
+      },
+    child: Container(
+      width: 100,
+      margin: const EdgeInsets.only(right: 15),
+      decoration: BoxDecoration(
+        color: const Color(0xff107163),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          // ignore: avoid_unnecessary_containers
+          Container(
+            child: 
+            SvgPicture.asset(img, height: size.height * 0.1,),
+          ),
+          Container(
+            // ignore: prefer_const_constructors
+            margin: EdgeInsets.only(top: 10),
+            child: Text(
+              name,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 13,
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+        ],
+      ),
+      )
+    );
+  }
+
+  Widget demoCategories3(String img, String name) {
+    Size size = MediaQuery.of(context).size;
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ElectrocardiogramaBanner()));
       },
     child: Container(
       width: 100,
